@@ -3,5 +3,5 @@ services:
     name: my-web-app
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app2:server --bind 0.0.0.0:$PORT
+    startCommand: gunicorn app:server --bind 0.0.0.0:$PORT
 

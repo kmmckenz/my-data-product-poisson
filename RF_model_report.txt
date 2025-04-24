@@ -1,0 +1,7 @@
+Random Forest Model Performance Report
+========================
+Mean Squared Error (MSE): 48222758103529.266
+R-squared (R²): -0.18012783493528484
+Cross-Validation (MSE): [-0.14261701 -0.5627835  -0.64180773 -0.35064266 -1.01188213]
+Average CV Score (R²): [-9.57114844e+13 -5.16463723e+13 -4.57552169e+13 -4.47304023e+13
+ -5.29067861e+13]

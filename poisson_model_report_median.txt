@@ -1,0 +1,8 @@
+Poisson Model Performance Report (Outliers Removed through IQRs Away)
+========================
+Mean Squared Error (MSE): 1308816023268.6018
+R-squared (R²): -1.0858840857608243e-06
+Cross-Validation (MSE): [-4.03040098e-04 -2.26755489e-06 -1.37710699e-04 -7.68340059e-05
+ -4.63809313e-06]
+Average CV Score (R²): [-1.29573810e+12 -1.31672075e+12 -1.33107990e+12 -1.31596785e+12
+ -1.31717294e+12]

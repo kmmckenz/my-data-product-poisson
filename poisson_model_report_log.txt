@@ -1,0 +1,6 @@
+Poisson Model Performance Report (Log Transformed Data)
+========================
+Mean Squared Error (MSE): 36.940747655014526
+R-squared (R²): 0.09858806028453393
+Cross-Validation (MSE): [0.14697555 0.15296536 0.14090368 0.1322251  0.1474509 ]
+Average CV Score (R²): [-37.05762033 -36.85571939 -37.24678195 -37.68466027 -36.90699158]

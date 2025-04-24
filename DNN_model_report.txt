@@ -1,0 +1,4 @@
+DNN Model Performance Report
+========================
+Mean Squared Error (MSE): 43642823956364.0
+R-squared (R²): -0.06804573963836003

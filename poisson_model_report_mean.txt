@@ -1,0 +1,7 @@
+Poisson Model Performance Report (Outliers Removed through Standard Deviations Away)
+========================
+Mean Squared Error (MSE): 10631726924267.488
+R-squared (R²): 0.0019319613551788128
+Cross-Validation (MSE): [0.00078302 0.00105624 0.00109652 0.00033645 0.00087335]
+Average CV Score (R²): [-1.01706757e+13 -1.10077920e+13 -1.12003147e+13 -1.10711764e+13
+ -1.03792960e+13]

@@ -1,0 +1,4 @@
+DNN Model Performance Report (with Outliers Removed through Standard Deviations Away
+========================
+Mean Squared Error (MSE): 12532594920075.143
+R-squared (R²): -0.17779194495551454

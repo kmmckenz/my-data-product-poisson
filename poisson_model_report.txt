@@ -1,0 +1,7 @@
+Poisson Model Performance Report
+========================
+Mean Squared Error (MSE): 40839273939600.09
+R-squared (R²): 0.002693973499347746
+Cross-Validation (MSE): [0.00030807 0.00079355 0.00105111 0.00047229 0.00066863]
+Average CV Score (R²): [-8.37393436e+13 -3.30214573e+13 -2.78395102e+13 -3.31022245e+13
+ -2.62795769e+13]

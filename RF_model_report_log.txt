@@ -1,6 +1,0 @@
-Random Forest Model Performance Report (with Log Transformed Data)
-========================
-Mean Squared Error (MSE): 49.05173430731382
-R-squared (R²): -0.13586517945585053
-Cross-Validation (MSE): [-0.14437813 -0.12966834 -0.1424494  -0.15251828 -0.13133941]
-Average CV Score (R²): [-49.71478852 -49.15352627 -49.53177288 -50.05014495 -48.97587012]

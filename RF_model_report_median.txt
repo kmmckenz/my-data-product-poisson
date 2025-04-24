@@ -1,7 +1,0 @@
-Random Forest Model Performance Report (with Data Outliers Removed through IQRs Away)
-========================
-Mean Squared Error (MSE): 9303333520386.098
-R-squared (R²): -6.108212974529689
-Cross-Validation (MSE): [-0.29449364 -0.27739045 -0.28881568 -0.28344243 -0.29480586]
-Average CV Score (R²): [-1.67664897e+12 -1.68196270e+12 -1.71528043e+12 -1.68883921e+12
- -1.70547533e+12]

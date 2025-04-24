@@ -1,7 +1,0 @@
-Random Forest Model Performance Report (with Data Outliers Removed through Standard Deviations Away)
-========================
-Mean Squared Error (MSE): 14747701344638.822
-R-squared (R²): -0.3859638774809353
-Cross-Validation (MSE): [-0.44445455 -0.40344189 -0.37839812 -0.35918576 -0.42938132]
-Average CV Score (R²): [-1.47025913e+13 -1.54651313e+13 -1.54554400e+13 -1.50528498e+13
- -1.48489401e+13]

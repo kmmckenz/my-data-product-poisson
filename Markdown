@@ -1,0 +1,124 @@
+# ## Models
+
+# Three models were chosen to compare and analyze which performed the best.
+# These included the Poisson regression, Random Forest, and Deep Neural
+# Networks. Overall, the ideal is to see three differing styles of approaches to
+# modeling, with different levels of computational complexity. The dependent
+# variable in the model is the daily new confirmed deaths due to COVID-19, and
+# the independent variable is the daily new COVID-19 doses. Eighty percent of the
+# data will be used to train, and twenty percent will be used as testing data. All
+# data sets created, (the original observations, observations without outliers based
+# on standard deviations away and interquartile range away, and log
+# transformation), will be ran through the models and compared.
+# 
+# Poisson regression was chosen as the initial model, due to the data being countbased, its wide use in the research community, and the lower number of
+# limitations than other modeling, such as ARIMA (The Pennsylvania State
+# University, n.d. & Liu, 2024). The mathematical representation of a Poisson
+# regression is as follows: log(λ i) = log(ni) + Xiβ (Elliot et al., 2005). The entity, λ
+# is the expected number of deaths on a given day, n is the offset term, X is the
+# independent variables, and β is the coefficient to be estimated. The function
+# linear_model.PoissonRegressor() from Scikit-learn was utilized to create the
+# model. Initial analysis will be made from the mean squared error, R-squared, and
+# predictions against observed values graph.
+
+# ## GUI Elements
+
+# %% [markdown]
+# The main GUI elements implemented were in the early graphs while exploring
+# the data. As the main purpose of this product is to share results and knowledge
+# on model performance for pandemic related data. These graphs included Box
+# Plots for COVID-19 vaccinations and deaths, were a drop down box allowed for
+# specific locations or the entirety of the world data was viewed. The box plot is
+# important in outlier identification. This was also applied to histograms and line
+# plots of the COVID-19 doses and related deaths. Histograms are important in
+# understanding the structure of the data, while the line plot could be utilized to
+# indetify potential trends in the data. If an individual was interested in just local
+# information, or how this compared to another area or the entire world data, it is
+# now visually available to them for visualizing outliers, data structure, and trends.
+# Another visual aid provided was the COVID-19 vaccinations and deaths shown on
+# a map of the world. As the daily rates did not appear to add much context,
+# cumulative counts were added and applied as a drop down option for the graph.
+# This allows for people to see where potential areas of high or low activity for
+# vaccinations administered or deaths due to the virus. All utlizied the
+# update_layout() function from plotly (Plotly, n.d.). Otherwise, the product is fairly
+# straight-forward, as analysis models and their results are printed. The additions
+# enhance the user experience by providing a detailed and big picture viewpoints
+# of the data. This could aid in analysis by identifying any areas that appear
+# significant or as potential outliers to the user.
+
+# %% [markdown]
+# ## Security
+
+# %% [markdown]
+# At this time, no security systems have been developed for the product. The data utilized is made publicly available and contains no personal identifiable information. As for the processing and modeling of the data, the purpose is for educational use, only. Testing of functions is performed to ensure all are appropriately working. If anyone were to make harmful changes to these, then they would only be preventing themselves from gaining insightful results.
+# 
+# If users upload data that contains personal information or develop their own product that is used for important decision making, then it is recommended that more measures are included for security. Additionally, any externally uploaded data should be fully preprocessed, as the current data was. The only exception is no implementations were performed for analyzing that the data type was appropriate for the data, as this must be examined and changed on an individual basis. All cleaning and preprocessing steps should be examined with introduction of new data, as well as analyzing the newly uploaded data for validity.
+# 
+# There is a risk that others could make changes to the models, and therefore, change the integrity of the model. It is recommended to all users to review the models for appropriate structure prior to implementation.
+
+# %% [markdown]
+# ## Revisions
+
+# %% [markdown]
+# New additions to the product included more references, addressing security, creating a pop-up to allow url data uploads, adding tests to each function, and a help guide at the top of each file.
+# 
+# Updates to the files included a more in depth exploration of potential seasonality and trends in the data, fixing code to actually use the split of the train and test data, and updating codes so no warnings or error messages were received.
+# 
+# Failed attempts at revisions were introducing more feature engineering techniques for Poisson Regression, Random Forest, and DNN modeling. Introducing seasonality did not show increase performance in the models. As previous research has shown more success at predicting with more localized data, it is recommended to take this approach when analyzing pandemic related data.
+# 
+# From this information and the poor performance across all models, future goals are to attempt to rectify prior errors at improving model performance in new files. If these still return poor results, an exploration of learning data at a more local level will be the new objective to compare performance against.
+# 
+# For adherence to industry standards, it is imperative to have reproducibile and replicabile results (Gîrjău, Horton, & Pruim, 2023). Given this information, it is recommended to not make decisions from any of the current models. Any further implementations should focus on the logarithmic transformed data set. Additionally, the elimination of errors and warning messages follows best practices. It is also recommended to learn from the work of others. Prior work was used when devloping the models, as seen in the inserted referneces.
+
+# %% [markdown]
+# ## References 
+
+# %% [markdown]
+# Aguinis, H., Gottfredson, R. K., & Joo, H. (2013). Best-practice recommendations for defying, idenfitying, and handling outliers. *Organizational Research Methods, 16*(2). https://doi.org/10.1177/1094428112470848
+# 
+# Alroy-Preis, S., Angulo, F. Anis, E., Brooks, N., Haas, E. J., Jodar, :., Khan, F., Levy, Y., McLaughlin, J. M., Mircus, G., Pan, K., Singer, S. R., Smaja, M., Southern, J., & Swerdlow, D. L. (2021). Impact and effectiveness of mRNA BNT162b2 vaccine against SARS-CoV-2 infections and COVID-19 cases, hospitalisations, and deaths following a nationwide vaccination campaign in Israel: an observational study using national surveillance data. *Lancet, 397*(10287), 1819-1829. doi: 10.1016/S0140-6736(21)00947-8 
+# 
+# Appel, C., Beltekian, D., Dattani, S., Gavrilov, D., Giattino, C., Hasell, J.,
+# Macdonald, B., Mathieu, E., Ortiz-Ospina, E., Ritchie, H., Rodes-Guirao, L., &
+# Roser, M. (2025). COVID-19 pandemic [Data set]. *Our World in Data.*
+# https://ourworldindata.org/coronavirus
+# 
+# Barbeira, P. B., Bartolomeu, M. L., Castelli, J. M., Del Valle Juarez, M., Esperatti, M., Fuentes, N., Galligani, G., Giovacchini, C. M., Iummato, L. E., Laurora, M., Pennini, V., Pesce, M., Rearte, A. Rearte, R., Santoro, A., Tarragona, S., & Vizzotti, C. (2022). Effectiveness of rAd26-rAd5, ChAdOx1 nCoV-19, and BBIBP-CorV vaccines for risk of infection with SARS-CoV-2 and death due to COVID-19 in people older than 60 years in Argentina: a test-negative, case-control, and retrospective longitudinal study. *Lancet, 399*(10331), 1254-1264. doi: 10.1016/S0140-6736(22)00011-3 
+# 
+# Barron, J. A., Buenrostro-Mariscal, R., Crossa, J., Montesinos-Lopez, A.
+# Montesinos-Lopez, J. C., Montesinos-Lopez, O. A., & Salazar, E. (2021).
+# Application of a Poisson deep neural network model for the prediction of count
+# data in genome-based prediction. *The Plant Genome, 14*(3).
+# https://doi.org/10.1002/tpg2.20118
+# 
+# Brownlee, J. (2022). Your first deep learning project in Python with Keras step-by-step. *Machine Learning Mastery.* https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/
+# 
+# Elliott, L., Loomis, D., & Richardson, D. B. (2005). Poisson regression analysis of
+# ungrouped data. *Occupational and Environmental Medicine, 62*, 325-329. DOI:
+# 10.1136/oem.2004.017459
+# 
+# Fandohan, A. B., Kakaï, R. G., & Mushaglusa, C. Z. (2022). Random forest in count
+# data modelling: An analysis of the influence of data features and overdispersion
+# on regression performance. *Journal of Probability and Statistics, 1*.
+# https://doi.org/10.1155/2022/2833537
+# 
+# GeeksforGeeks. (2025). Random forest regression in Python. https://www.geeksforgeeks.org/random-forest-regression-in-python/ 
+# 
+# Gîrjău, M., Horton, N. J., & Prium, R. (2023). Fostering better coding practices for data scientists. *HDSR.* https://hdsr.mitpress.mit.edu/pub/8wsiqh1c/release/4
+# 
+# Katla, N. (2020). Poisson regression implementation- Python. *Medium.* https://medium.com/@kn12/poisson-regression-implementation-python-28d15e95dc15
+# 
+# Liu, J. (2024). Navigating the financial landscape: The power and limitations of
+# the ARIMA model. *Highlights in Science, Engineering and Technology, 88*, 747-752. https://drpress.org/ojs/index.php/HSET/article/view/19082/18645
+# 
+# National Cancer Institute. (2023). Cleaning data: The basics. *Center for
+# Biomedical Informatics and Information Technology.*
+# https://datascience.cancer.gov/training/learn-data-science/clean-data-basics
+# 
+# The Pennsylvania State University. (n.d.). 9: Poisson Regression.
+# https://online.stat.psu.edu/stat504/book/export/html/782#:~:text=Interpretations,tabletop%20of%20a%20certain%20area
+# 
+# Plotly. (n.d.). Creating and updating figures in Python.
+# https://plotly.com/python/creating-and-updating-figures/#updating-figures
+# 
+# Sarahjane3102. (2022). How to split the dataset With scikit-learn’s train_test_split() function *GeeksforGeeks.* https://www.geeksforgeeks.org/how-to-split-the-dataset-with-scikit-learns-train_test_split-function/

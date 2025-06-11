@@ -1,9 +1,0 @@
-digraph {
-	X1 [label="Feature X1"]
-	Lin [label="Linear Combination: β0 + β1X1"]
-	X1 -> Lin
-	Poisson [label="Poisson Link Function: exp(Lin)"]
-	Lin -> Poisson
-	Y [label="Predicted Count (Y)"]
-	Poisson -> Y
-}
